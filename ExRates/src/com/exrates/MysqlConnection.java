@@ -1,8 +1,8 @@
 package com.exrates;
 
-import java.sql.DriverManager;
+import java.sql.*;
 
-import com.mysql.jdbc.Connection;
+import com.mysql.cj.jdbc.*;
 
 public class MysqlConnection {
 	
@@ -11,9 +11,9 @@ public class MysqlConnection {
 		Connection conn = null;
 		
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 			
-			conn =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/exrates","exrates","exrates123");
+			conn =(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/exrates?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","exrates","exrates123");
 			System.out.println("mysqlConnection.getDbConnection() : Mysql Connecton Object retrieved Successfully");
 		}
 		catch (Exception e) {

@@ -1,15 +1,16 @@
 package com.exrates;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
+import com.mysql.cj.jdbc.*;
 
 public class RateDataHandler {
 	

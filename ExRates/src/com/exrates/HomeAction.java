@@ -32,6 +32,7 @@ public class HomeAction extends ActionSupport {
     		lastUpdateTime = format.format(dateTime);
     		//System.out.println("HomeAction.execute() : Time : "+lastUpdateTime);
     		setLastUpdateTime(lastUpdateTime);
+    		//setLastUpdateTime(dateTime.toString());
     		
     		setExRateDataObj(exRateDataObj);
     		System.out.println("HomeAction.execute() : Rate data from DB : "+exRateDataObj.toString());
